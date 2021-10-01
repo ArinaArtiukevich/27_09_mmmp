@@ -1,0 +1,36 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.jwd</groupId>
+    <artifactId>27_09_mmmp</artifactId>
+    <version>1</version>
+    <name>27_09_mmmp</name>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>dao</module>
+        <module>service</module>
+        <module>controller</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+    <build>
+        <finalName>27_09_mmmp</finalName>
+    </build>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.10</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
