@@ -2,10 +2,13 @@ package com.jwd.dao.repository.impl;
 
 import com.jwd.dao.domain.User;
 import com.jwd.dao.domain.UserDto;
+import com.jwd.dao.exception.DaoException;
 import com.jwd.dao.repository.UserDao;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static java.util.Objects.isNull;
 
 public class UserDaoImpl implements UserDao {
     private List<User> stubbedUsers = new ArrayList<>();
@@ -31,7 +34,11 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    public UserDto saveUser(User user) {
+    public UserDto saveUser(User user) throws DaoException{
+        if (isNull(user)) {
+            throw new DaoException();
+        }
+        // validate parameters from higher layer
         // do not forget to generate user id if needed
         stubbedUsers.add(user); // execute query saving user to database
         return new UserDto(user);
