@@ -4,6 +4,7 @@ import com.jwd.dao.domain.User;
 import com.jwd.dao.domain.UserDto;
 import com.jwd.dao.exception.DaoException;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public interface UserDao {
@@ -12,6 +13,9 @@ public interface UserDao {
      * @return List<UserDto>
      */
     List<UserDto> getUsers();
+
+    UserDto getUserById(Long id);
+    UserDto getUserByLoginAndPassword(User user);
 
     /**
      *
