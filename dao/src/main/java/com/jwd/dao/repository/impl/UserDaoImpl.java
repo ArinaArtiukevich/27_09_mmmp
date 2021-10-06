@@ -4,6 +4,7 @@ import com.jwd.dao.domain.User;
 import com.jwd.dao.domain.UserDto;
 import com.jwd.dao.exception.DaoException;
 import com.jwd.dao.repository.UserDao;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +22,16 @@ public class UserDaoImpl implements UserDao {
         stubbedUsers.add(new User(1L, "abra", "Andrei", "Rohau", "111"));
         stubbedUsers.add(new User(2L, "bara", "Valera", "Petrov", "222"));
         stubbedUsers.add(new User(3L, "cobra", "Serhei", "Skaryna", "333"));
+    }
+
+    @Override
+    public UserDto getUserById(Long id) {
+        throw new NotImplementedException();
+    }
+
+    @Override
+    public UserDto getUserByLoginAndPassword(User user) {
+        throw new NotImplementedException();
     }
 
     @Override

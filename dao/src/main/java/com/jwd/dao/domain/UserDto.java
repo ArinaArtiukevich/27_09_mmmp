@@ -72,4 +72,14 @@ public class UserDto {
     public int hashCode() {
         return Objects.hash(id, login, firstName, lastName);
     }
+
+    @Override
+    public String toString() {
+        return "UserDto{" +
+                "id=" + id +
+                ", login='" + login + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                '}';
+    }
 }
